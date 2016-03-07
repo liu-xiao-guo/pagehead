@@ -1,0 +1,77 @@
+project(chinaweather CXX)
+cmake_minimum_required(VERSION 2.8.10)
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake" "${CMAKE_MODULE_PATH}")
+
+# We require g++ 4.9, to avoid ABI breakage with earlier version.
+set(cxx_version_required 4.9)
+if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+    if (NOT CMAKE_CXX_COMPILER_VERSION MATCHES "^${cxx_version_required}")
+        message(FATAL_ERROR "g++ version must be ${cxx_version_required}!")
+    endif()
+endif()
+
+# Set strict and naggy C++ compiler flags, and enable C++11
+add_definitions(
+  -fno-permissive
+  -std=c++11
+  -pedantic
+  -Wall
+  -Wextra
+  -fPIC
+  -DQT_NO_KEYWORDS
+)
+
+include(GNUInstallDirs)
+find_package(PkgConfig)
+
+# We depend on Boost for string trimming
+find_package(
+  Boost
+  REQUIRED
+)
+
+# Search for our dependencies
+pkg_check_modules(
+  SCOPE
+  libunity-scopes>=0.6.0
+  REQUIRED
+)
+
+# Add our dependencies to the include paths
+include_directories(
+  "${CMAKE_SOURCE_DIR}/include"
+  ${Boost_INCLUDE_DIRS}
+  ${SCOPE_INCLUDE_DIRS}
+)
+
+set(UBUNTU_MANIFEST_PATH "manifest.json" CACHE INTERNAL "Tells QtCreator location and name of the manifest")
+set(SCOPE_INSTALL_DIR "/chinaweather")
+
+# If we need to refer to the scope's name or package in code, these definitions will help
+add_definitions(-DPACKAGE_NAME="com.ubuntu.developer.liu-xiao-guo.chinaweather")
+add_definitions(-DSCOPE_NAME="com.ubuntu.developer.liu-xiao-guo.chinaweather_chinaweather")
+
+# Install the click manifest
+install(FILES manifest.json DESTINATION "/")
+install(FILES "chinaweather.apparmor" DESTINATION "/")
+
+# Make this file show up in QtCreator
+add_custom_target(hidden_files
+  ALL
+  SOURCES
+    manifest.json
+    "chinaweather.apparmor"
+)
+
+# Add our main directories
+add_subdirectory(src)
+add_subdirectory(data)
+
+# Set up the tests
+enable_testing()
+add_subdirectory(tests)
+add_custom_target(
+  check
+  ${CMAKE_CTEST_COMMAND} --force-new-ctest-process --output-on-failure
+)
+

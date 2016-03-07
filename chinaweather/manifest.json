@@ -1,0 +1,15 @@
+{
+    "architecture": "armhf",
+    "description": "A simple Unity scope that accesses local content",
+    "framework": "ubuntu-sdk-14.10",
+    "hooks": {
+        "chinaweather": {
+            "apparmor": "chinaweather.apparmor",
+            "scope": "chinaweather"
+        }
+    },
+    "maintainer": "XiaoGuo, Liu <xiaoguo.liu@canonical.com>",
+    "name": "com.ubuntu.developer.liu-xiao-guo.chinaweather",
+    "title": "chinaweather",
+    "version": "0.1"
+}

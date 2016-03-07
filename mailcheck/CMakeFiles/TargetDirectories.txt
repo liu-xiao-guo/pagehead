@@ -1,0 +1,13 @@
+/home/liuxg/git/mailcheck/CMakeFiles/check.dir
+/home/liuxg/git/mailcheck/src/CMakeFiles/com.ubuntu.developer.liu-xiao-guo.mailcheck_mailcheck.ini_1.dir
+/home/liuxg/git/mailcheck/tests/gmock/CMakeFiles/gmock.dir
+/home/liuxg/git/mailcheck/tests/gmock/CMakeFiles/gmock_main.dir
+/home/liuxg/git/mailcheck/tests/gmock/gtest/CMakeFiles/gtest.dir
+/home/liuxg/git/mailcheck/tests/gmock/gtest/CMakeFiles/gtest_main.dir
+/home/liuxg/git/mailcheck/CMakeFiles/hidden_files.dir
+/home/liuxg/git/mailcheck/po/CMakeFiles/mailcheck.pot_1.dir
+/home/liuxg/git/mailcheck/src/CMakeFiles/scope.dir
+/home/liuxg/git/mailcheck/src/CMakeFiles/scope-static.dir
+/home/liuxg/git/mailcheck/tests/unit/CMakeFiles/scope-unit-tests.dir
+/home/liuxg/git/mailcheck/po/CMakeFiles/translations.dir
+/home/liuxg/git/mailcheck/po/CMakeFiles/translations_1.dir
