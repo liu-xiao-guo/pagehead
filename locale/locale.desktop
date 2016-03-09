@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=locale
+Exec=qmlscene $@ Main.qml
+Icon=locale.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+

@@ -1,0 +1,17 @@
+{
+    "name": "locale.liu-xiao-guo",
+    "description": "description of locale",
+    "architecture": "all",
+    "title": "locale",
+    "hooks": {
+        "locale": {
+            "apparmor": "locale.apparmor",
+            "desktop":  "locale.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "XiaoGuo, Liu <xiaoguo.liu@canonical.com>",
+    "framework" : "ubuntu-sdk-14.10"
+}
+
+

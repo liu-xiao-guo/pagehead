@@ -1,0 +1,16 @@
+{
+    "name": "contenthub-exporter.liu-xiao-guo",
+    "description": "description of contenthub-exporter",
+    "architecture": "all",
+    "title": "contenthub-exporter",
+    "hooks": {
+        "contenthub-exporter": {
+            "apparmor": "contenthub-exporter.apparmor",
+            "desktop": "contenthub-exporter.desktop",
+            "content-hub": "content-hub/hub-exporter.json"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "XiaoGuo, Liu <xiaoguo.liu@canonical.com>",
+    "framework": "ubuntu-sdk-15.04"
+}

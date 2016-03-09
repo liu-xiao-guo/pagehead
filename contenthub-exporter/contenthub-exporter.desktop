@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=contenthub-exporter
+Exec=qmlscene $@ Main.qml
+Icon=contenthub-exporter.jpg
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+
