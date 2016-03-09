@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=contenthub-picker
+Exec=qmlscene $@ Main.qml
+Icon=contenthub-picker.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+
