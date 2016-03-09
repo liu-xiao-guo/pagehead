@@ -1,0 +1,17 @@
+{
+    "name": "panel.liu-xiao-guo",
+    "description": "description of Panel",
+    "architecture": "all",
+    "title": "Panel",
+    "hooks": {
+        "Panel": {
+            "apparmor": "Panel.apparmor",
+            "desktop":  "Panel.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "XiaoGuo, Liu <xiaoguo.liu@canonical.com>",
+    "framework" : "ubuntu-sdk-15.04"
+}
+
+

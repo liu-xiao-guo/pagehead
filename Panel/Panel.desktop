@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Panel
+Exec=qmlscene $@ Main.qml
+Icon=Panel.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+
