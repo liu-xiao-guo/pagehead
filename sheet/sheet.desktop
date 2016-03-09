@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=sheet
+Exec=qmlscene $@ Main.qml
+Icon=sheet.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+

@@ -1,0 +1,17 @@
+{
+    "name": "sheet.liu-xiao-guo",
+    "description": "description of sheet",
+    "architecture": "all",
+    "title": "sheet",
+    "hooks": {
+        "sheet": {
+            "apparmor": "sheet.apparmor",
+            "desktop":  "sheet.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "XiaoGuo, Liu <xiaoguo.liu@canonical.com>",
+    "framework" : "ubuntu-sdk-15.04"
+}
+
+
